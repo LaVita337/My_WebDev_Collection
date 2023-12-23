@@ -1,0 +1,42 @@
+.screen-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--horizontal-space);
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.screen-header__title {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.screen-header__icons span {
+    margin-left: 20px;  
+}
+
+.screen-header__notification-dot {
+    background-color: tomato;
+    color: tomato;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    display: flex;
+    position: absolute;
+    right: 15px;
+    top: 25px;
+}
+
+@keyframes rotateGear {
+    from {
+        transform: none;
+    }
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+
+.screen-header__icons .fa-gear:hover {
+    animation: rotateGear 1.5s ease-in-out infinite;
+}
