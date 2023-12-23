@@ -1,0 +1,79 @@
+@import "normalize.css"; /* normalize browsers compatibility */
+
+body {
+    text-align: center;
+    margin: 0px;
+}
+div {
+    box-sizing: border-box;
+}
+.main-background {
+    width: 100%;
+    height: 500px;
+    background-image: url(../images/homebackground.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 0.01px;
+    position: relative;
+}
+.main-title {
+    text-align: center;
+    color: whitesmoke;
+    font-size: 50px;
+    margin-top: 100px;
+}
+.main-subtitle {
+    text-align: center;
+    color: whitesmoke;
+    font-size: 40px;
+}
+.main-btn {
+    background-color: whitesmoke;
+    padding: 20px 40px;
+    border: none;
+    border-radius: 10px;
+    font-size: medium;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: 900;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+    width: 150px;
+    bottom: 100px;
+    box-shadow: 5px 5px 5px;
+}
+.main-btn:hover {
+    cursor: pointer;
+}
+.main-descriptionBox {
+    width: 80%;
+    max-width: 800px;
+    min-width: 200px;
+    height: 250px;
+    background-color: #eee;
+    border-radius: 10px;
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: -30px;
+    opacity: 95%;
+}
+.main-descriptionBox {
+    padding: 10px;
+    z-index: 5;
+}
+
+.main-descriptionBox>p {
+    font-size: larger;
+
+}
+.main-form>input {
+    width: 200px;
+    padding: 10px;
+    font-size: 15px;
+    border: 1.5px solid gray;
+    border-radius: 10px;
+}

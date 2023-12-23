@@ -1,0 +1,55 @@
+:root {
+    scroll-behavior: auto !important;
+}
+.navbar {
+    position: fixed !important;
+    width: 100%;
+    z-index: 5;
+}
+.navbar-brand {
+    font-size: 30px;
+    transition: all 0.5s;
+}
+.list-group {
+    display: none !important;
+}
+.show {
+    display: block !important;
+    visibility: visible;
+}
+.modalBlack-bg {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    z-index: 6;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.2s;
+}
+.show-modal {
+    visibility: visible;
+    opacity: 1;
+}
+.modal-container {
+    padding-top: 100px;
+}
+.modal-wrapper {
+    width: 500px;
+    margin: 400px auto;
+    padding: 20px;
+    background-color: #eee;
+    border-radius: 5px;
+}
+
+.badge {
+    cursor: pointer;
+}
+.darkmode {
+    background-color: black;
+    color: white;
+}
+.form-hide {
+    display: none !important;
+}

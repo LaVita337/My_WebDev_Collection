@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="/css/main.css" rel="stylesheet">
+    <link href="/css/ani.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+    integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+
+        </div>
+    </div>
+
+
+    <div class="container">
+            <button class="moreBtn">Load more</button>
+            <button class="sortPrice">Sort by price</button>
+            <button class="sortBackPrice">Sort by price(reverse)</button>
+            <button class="priceLowerthan60001">Price below 60000</button>
+            <button class="sortReverseName">Reverse Name</button>
+        </div>
+
+
+
+    <script>
+        var products = [{
+                id: 0,
+                price: 30000,
+                title: 'Blossom Dress'
+            },
+            {
+                id: 1,
+                price: 50000,
+                title: 'Springfield Shirt'
+            },
+            {
+                id: 2,
+                price: 70000,
+                title: 'Black Monastery'
+            }
+        ];
+
+        products.forEach((a, i) => {
+            $('.row').append(`<div id="item-card" class="col-sm-4">
+                <img src="https://via.placeholder.com/600" class="w-100">
+                <h5>${a.title}</h5>
+                <p>${a.price}</p>
+                <button class="buy">Buy now</button>
+                </div>`)
+            });
+
+
+        $('.moreBtn').click(function(){
+            $.get("https://codingapple1.github.io/js/more1.json")
+            .done((data) => {
+        data.forEach((a, i)=>{
+            $('.row').append(`<div id="item-card" class="col-sm-4">
+                <img src="https://via.placeholder.com/600" class="w-100">
+                <h5>${a.title}</h5>
+                <p>${a.price}</p>
+                </div>`)
+            });
+        })
+        })
+
+        $('.sortPrice').click(function(){
+            products.sort(function(a, b){
+                return a.price - b.price;
+            });
+            $('.row').html('');
+            products.forEach((a, i)=>{
+            $('.row').append(`<div id="item-card" class="col-sm-4">
+                <img src="https://via.placeholder.com/600" class="w-100">
+                <h5>${a.title}</h5>
+                <p>${a.price}</p>
+            </div>`)
+        });
+        });
+
+        $('.sortBackPrice').click(function(){
+            
+            products.sort(function(a, b){
+                return b.price - a.price;
+            });
+            $('.row').html('');
+            products.forEach((a, i)=>{
+            $('.row').append(`<div id="item-card" class="col-sm-4">
+                <img src="https://via.placeholder.com/600" class="w-100">
+                <h5>${a.title}</h5>
+                <p>${a.price}</p>
+            </div>`)
+            });
+        });
+
+        $('.priceLowerthan60001').click(function(){
+            var newProducts = products.filter((a) => a.price <= 60000)
+
+            $('.row').html('');
+
+            newProducts.forEach((a, i)=>{
+            $('.row').append(`<div id="item-card" class="col-sm-4">
+                <img src="https://via.placeholder.com/600" class="w-100">
+                <h5>${a.title}</h5>
+                <p>${a.price}</p>
+            </div>`)
+            });
+        });
+            
+        $('.sortReverseName').click(function(){
+
+            products.sort(function(a, b){
+                if (a.title < b.title){
+                    return 1
+                } else {
+                    return -1
+                }
+            });
+            
+            $('.row').html('');
+
+            products.forEach((a, i)=>{
+            $('.row').append(`<div id="item-card" class="col-sm-4">
+                <img src="https://via.placeholder.com/600" class="w-100">
+                <h5>${a.title}</h5>
+                <p>${a.price}</p>
+            </div>`)
+            });
+        });
+
+
+/*         $('.buy').click((e) => {
+            const itemName = $(e.target).siblings('h5').text();
+            if (localStorage.getItem('cart') != null){
+                const cartItems = JSON.parse(localStorage.cart);
+                cartItems.push(itemName);
+            localStorage.setItem('cart', JSON.stringify(cartItems));
+            } else if (itemName == JSON.parse(localStorage.cart)){
+                console.log('hi');
+            } else {
+            localStorage.setItem('cart', JSON.stringify([itemName]));
+            }
+        }); */
+
+        $(document).ready(() => {
+            $('.buy').click((e) => {
+            const itemName = $(e.target).siblings('h5').text();
+            let cartItems = [];
+            if (localStorage.getItem('cart') !== null) {
+                cartItems = JSON.parse(localStorage.cart);
+                const existingItem = cartItems.find(item => item.name === itemName);
+                if (existingItem) {
+                existingItem.quantity += 1;
+                } else {
+                cartItems.push({name: itemName, quantity: 1});
+                }
+            } else {
+                cartItems.push({name: itemName, quantity: 1});
+            }
+            localStorage.setItem('cart', JSON.stringify(cartItems));
+            });
+        });
+
+
+
+
+    </script>
+</body>
+</html> 

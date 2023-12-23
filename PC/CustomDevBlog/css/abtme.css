@@ -1,0 +1,327 @@
+@import "../reset.css";
+
+@font-face {
+    font-family: 'NanumSquareB';
+    font-weight: 900;
+    src: url(../../nanumsquare/NanumSquareB.woff);
+}
+body {
+    font-family: monospace;
+}
+
+/* Navigation Bar */
+
+.flex-container {
+    width: 80%;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    margin: 10px auto 10px ;
+    padding: 10px;
+    align-items: center;
+    font-size: x-large;
+
+}
+.nav-spacebetween {
+    flex-grow: 1;
+}
+.nav-contents {
+    margin-right: 20px;
+}
+
+/* About my info */
+
+p {
+    line-height: 25px;
+}
+.abtme {
+    text-align: center;
+}
+#backgroundImg {
+    display: block;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    object-fit: cover;
+    width: 100%;
+    height: 600px;
+    margin: auto;
+}
+.abtme h1, .abtme h3 {
+    color: whitesmoke;
+    text-shadow: 2px 2px 3px black;
+}
+.abtme h1, .abtme h3,
+.abtme .box__intro {
+    position: relative;
+    top: -150px;
+}
+.box__intro {
+    width: 80%;
+    max-width: 800px;
+    background-color: #eee;
+    border-radius: 10px;
+    padding: 50px;
+    margin: auto;
+    box-shadow: 0 0 10px gray;
+    font-size: large;
+}
+
+/* video image */
+
+.img-bg {
+    width: 50%;
+    margin: auto;
+    border-color: #eee;
+    padding: 20px;
+}
+.img-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.img-item {
+    margin-bottom: 100px;
+}
+.img-item img{
+    object-fit: contain;
+    width: 100%;
+    box-shadow: 5px 5px 10px gray;
+    border-radius: 10px;
+    display: block;
+}
+.img-ani {
+    position: relative;
+}
+.overlay-wrap {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.overlay-Bg {
+    width: 100%;
+    height: 100%;
+    background-color:rgba(0,0,0,0.5);
+    font-size: xx-large;
+    color: white;
+    margin-top: 67%;
+    transition: all 1s;
+    padding-top: 15%;
+}
+.overlay-Bg span {
+    font-size: 200px;
+    padding: 50px auto;
+}
+.overlay-wrap:hover .overlay-Bg {
+    margin-top: 0%;
+}
+
+/* contents list */
+
+.cnt-container {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 200px auto;
+}
+.cnt-item {
+    background-color: #eee;
+    width: 80%;
+    font-size: 20px;
+    margin: 0px auto;
+    padding: 50px 0px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px gray;
+    text-align: center;
+}
+.cnt-effect {
+    width: 100%;
+    margin: auto;
+    position: relative;
+}
+.cnt-overlay {
+    position: absolute;
+    width: 80%;
+    height: 100%;
+    left: 10%;
+    background-color: gray;
+    border-radius: 10px;
+    opacity: 0;
+    transition: all 1s;
+}
+.cnt-overlay:hover {
+    opacity: 0.3;
+}
+
+/* contact info */
+
+.contact {
+    width: 80%;
+    max-width: 800px;
+    padding: 50px;
+    margin: 300px auto 100px auto;
+    background-color: whitesmoke;
+    border-radius: 20px;
+    box-shadow: 0 0 10px gray;
+
+}
+.contact .form-input {
+    height: 40px;
+    border: 2px solid gray;
+    border-radius: 10px;
+}
+.contactTitleMail {
+    width: 100%;
+    padding: 10px;
+}
+.contactTiltleMail>h1 {
+    margin-bottom: 50px;
+}
+.contact div>input[type=email],
+input[type=text],
+.contact div>textarea {
+    width: 100%;
+}
+.contactName {
+    width: 50%;
+    float: left;
+    padding: 10px;
+}
+.contactMessage {
+    width: 100%;
+    padding: 10px;
+}
+.contactMessage>textarea {
+    height: 100px;
+    border: 2px solid gray;
+    border-radius: 10px;
+}
+.contactCheckboxRaw {
+    padding: 10px;
+}
+.contact-send {
+    display: block;
+    margin-top: 20px;
+    padding: 7px;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    background-color: cornflowerblue;
+    font-size: large;
+    font-weight: bold;
+    color: whitesmoke;
+    cursor: pointer;
+}
+.contact-send:hover {
+    background-color: indianred;
+}
+
+
+
+@media screen and (max-width: 1200px){
+
+    .img-bg {
+        width: 80%;
+    }
+    .overlay-Bg {
+        padding-top: 25%;
+    }
+    .overlay-Bg span {
+        font-size: 100px;
+    }
+    .cnt-container {
+        width: 80%;
+        display: block;
+        margin: auto;
+        padding-left: 105px;
+        overflow: hidden;
+    }
+
+    .cnt-container:after{
+        content: "";
+	    display: block;
+        clear: both;
+    }
+
+    .cnt-effect {
+        width: 50%;
+        position: relative;
+        float: left;
+    }
+    .cnt-overlay {
+        position: absolute;
+        width: 250px;
+        height: 235px;
+        top: 5%;
+        left: 5%;
+    }
+    .cnt-overlay2 {
+        top: 5%;
+        left: 5%;
+    }    
+    .cnt-overlay3 {
+        top: 5%;
+        left: 5%;
+    }    
+    .cnt-overlay4 {
+        top: 5%;
+        left: 5%;
+    }
+    .cnt-item {
+        width: 250px;
+        margin: 30px;
+        background-color: #eee;
+        font-size: 20px;
+        
+    }
+
+
+}
+@media screen and (max-width: 567px){
+    .flex-container {
+        font-size: medium;
+    }
+    .box__intro {
+        font-size: 13px;
+    }
+    .overlay-Bg {
+        padding-top: 27%;
+    }
+    .overlay-Bg span {
+        font-size: 40px;
+    }
+    .cnt-container {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
+    }
+    .cnt-effect {
+        width: 70%;
+        position: relative;
+    }
+    .cnt-overlay {
+        position: absolute;
+        width: 100%;
+        height: 225px;
+        top: 7%;
+        left: 0;
+        border-radius: 10px;
+        margin: 0px auto;
+    }
+    .cnt-item {
+        background-color: #eee;
+        font-size: 20px;
+        width: 100%;
+        margin: 20px auto;
+    }
+
+
+}
+

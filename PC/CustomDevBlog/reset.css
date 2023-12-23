@@ -1,0 +1,27 @@
+html {
+    line-height: 1.15;
+}
+body {
+    margin: 0px;
+}
+div {
+    box-sizing: border-box;
+}
+input, textarea {
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+li, a {
+    text-decoration: none;
+    list-style-type: none;
+}
+a:link {
+    color: black;
+}
+a:visited {
+    color: black;
+}
+table {
+    border-collapse: collapse;
+}

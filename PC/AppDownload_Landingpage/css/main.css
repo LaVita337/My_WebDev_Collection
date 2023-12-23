@@ -1,0 +1,237 @@
+@import "reset.css";
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+}
+.btn {
+    margin: 0px auto;
+    padding: 20px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: all 0.1s;
+    cursor: pointer;
+}
+.btn-black {
+    background-color:#444445;
+    color: whitesmoke;
+    box-shadow: 0px 0px 7px black;
+
+}
+.btn-black:hover {
+    background-color: rgb(53, 53, 53);
+}
+.btn-black:active {
+    background-color: indianred;
+}
+
+
+.main-top {
+    height: 550px;
+    padding: 20px;
+    background-image: linear-gradient(#4997DB,#4E60C0);
+}
+.main-container {
+    max-width: 1200px;
+    margin: auto;
+}
+.main-container-text {
+    width: 60%;
+    float: left;
+    margin-top: 50px;
+    color:whitesmoke;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+.main-container-text p {
+    margin-bottom: 50px;
+}
+.main-container img {
+    float: right;
+    width: 400px;
+    margin-top: 94.5px;
+    
+}
+.main-container::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+
+
+.middle-cnts {
+    width: 80%;
+    margin: 50px auto;
+    text-align: center;
+}
+.middle-cnts p {
+    margin-bottom: 50px;
+}
+
+
+
+
+.services-cnts {
+    width: 100%;
+    background-color: #4E60C0;
+    color: whitesmoke;
+    padding: 3% 6%;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+.services-container {
+    width: 80%;
+    margin: auto;
+}
+.services-cnts-title {
+    margin: 2%;
+}
+.services-cnts-title span {
+    display: block;
+}
+.services-cnts-title span, 
+.services-cnts-title h2{
+    text-align: center;
+}
+.service-cnt-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.service-cnt-icon {
+    margin: 100px 50px 10px 50px;
+}
+.service-cnt-icon i {
+    margin: auto;
+    padding: 50px;
+    background-color: whitesmoke;
+    border-radius: 50%;
+    box-shadow: 0 0 7px black;
+    }
+.service-cnt-icon h4 {
+    margin-top: 70px;
+}
+
+
+
+.portfolio-cnts {
+    width: 100%;
+}
+.portfolio-title {
+    margin-top: 5%;
+    text-align: center;
+    text-shadow: 0px 1px 2px gray;
+}
+
+.portfolio-img {
+    float: left;
+    position: relative;
+    width: 50%;
+}
+.portfolio-img img {
+    width: 100%;
+    display: block;
+
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 10%;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+.overlay:hover {
+    transition: all ease-in-out 0.3s;
+    background-color: rgba(0,0,0,0.7);
+
+}
+.portfolio-wrapper::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+
+.icons-sns {
+    margin: 5% auto;
+    text-align: center;
+}
+
+
+@media screen and (max-width: 1040px) {
+    .main-top {
+        height: 100%;
+        padding: 0;
+        padding-top: 20px;
+    }
+    .main-container {
+        width: 80%;
+    }
+    .main-container-text {
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+    .main-container img {
+        float: none;
+        width: 80%;
+        display: block;
+        margin: 100px auto 0px auto;
+
+    }
+    .middle-cnts button{
+        margin-top: 10px;
+    }
+}
+@media screen and (max-width: 766px) {
+    .main-container-text h1 {
+        font-size: 24px;
+    }
+    .services-cnts {
+        padding: 3% 0;
+        height: 800px;
+    }
+    .services-container {
+        width: 100%;
+    }
+
+    .services-cnts-title {
+        margin-bottom: 100px;
+    }
+    .service-cnt-icons {
+        display: block;
+        width: 100%;
+        margin: auto;
+    }
+    .service-cnt-icon {
+        float: left;
+        width: 50%;
+        margin: 0;
+    }
+    .service-cnt-icon i {
+        display: block;
+        width: 10px;
+        margin-top: 50px;
+    }
+    .service-cnt-icon h4 {
+        font-size: 20px;
+        margin-top: 50px 0;
+    }
+    .service-cnt-icon p {
+        font-size: 18px;
+    }
+
+
+    
+    .overlay {
+        padding: 10px;
+    }
+    .overlay h1 {
+        font-size: 18px;
+    }
+    .overlay p {
+        font-size: 14px;
+    }
+}
