@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>SNS Profile</title>
+</head>
+<body class="bg-whitesmoke">
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">SNS Profile</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+                aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Dark offcanvas</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Dropdown
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="d-flex mt-3" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5 pt-5">
+        <div class="row mb-5">
+            <div class="col-lg-7 col-md-12 d-flex justify-content-lg-start align-items-center">
+                <div>
+                    <img class="img-thumbnail me-5 p-0 border-0 img-profile" src="./images/people/4.jpg" alt="#">
+                </div>
+                <div class="">
+                    <h4>Name</h4>
+                    <p>Front-end Developer</p>
+                    <a href="#" class="text-decoration-none">📍current location</a>
+                    <button class="btn btn-primary d-block mt-2">Contact</button>
+                </div>
+            </div>
+            <div class="col-lg-5 col-md-12 mt-md-5 d-flex justify-content-around align-items-center border-start border-2">
+                <div>
+                    <h6>Location</h6>
+                    <h6>Age</h6>
+                    <h6>Experience</h6>
+                    <h6>School</h6>
+                </div>
+                <div>
+                    <p>Somewhere in Seoul</p>
+                    <p>30</p>
+                    <p>Junior</p>
+                    <p>Beijing Foreign Studies University</p>
+                </div>
+            </div>
+        </div>
+
+        <h5 class="mb-3 p-3 border-bottom border-2">Profile</h5>
+
+        <div class="row">
+            <div class="card col-lg-3 col-md-12 p-3 mb-lg-0 mb-md-3">
+                <div class="card-body">
+                    <h5 class="card-title mb-2">WORKS</h5>
+                    <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem ex
+                        mollitia saepe minima
+                        cumque voluptatum ea suscipit ipsum cupiditate sit, soluta dolores odio, modi atque quia,
+                        perferendis aspernatur laborum facilis.</p>
+                </div>
+            </div>
+
+            <div class="card col-lg-6 col-md-12 p-3">
+                <div class="card-body">
+                    <h5 class="card-title">ABOUT</h5>
+                    <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod quibusdam
+                        cupiditate veritatis,
+                        distinctio itaque repudiandae tenetur quam ipsum, eos impedit asperiores laudantium nisi cum
+                        cumque,
+                        molestiae minima fuga id magni.</p>
+                    <div>
+                        <h4 class="mt-5">SKILLS</h4>
+                        <span class=" p-2 me-1 badge rounded-pill text-bg-secondary">HTML5</span>
+                        <span class=" p-2 me-1 badge rounded-pill text-bg-secondary">JavaScript</span>
+                        <span class=" p-2 me-1 badge rounded-pill text-bg-secondary">CSS3</span>
+                        <span class=" p-2 me-1 badge rounded-pill text-bg-secondary">Illustrator</span>
+                        <span class=" p-2 me-1 badge rounded-pill text-bg-secondary">Photoshop</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-10 m-auto mt-lg-0 mt-md-5">
+                <div class="card">
+                    <img src="./images/blueLemon.jpg" class="card-img-top d-block" alt="...">
+                    <div class="card-body d-flex flex-column align-items-center justify-content-around">
+                        <h5 class="card-text mb-3">Find me at Github</h5>
+                        <button class="d-block mb-3 m-auto btn btn-primary">Sign Up</button>
+                        <a href="#" class="text-decoration-none">Already a member?</a>
+                    </div>
+                </div>
+
+                <div class="ps-2">
+                    <h5 class="mt-3 mt-md-5 mb-3 pb-2 border-bottom border-2">People You Might Know</h5>
+                    <div class="d-flex mb-3">
+                        <img class="img-pplRecommend" src="./images/people/4.jpg" alt="">
+                        <div>
+                            <h6 class="m-0 ms-3">Name of someone</h6>
+                            <p class="m-0 ms-3">Developer</p>
+                            <a class="m-0 ms-3" href="#">Location</a>
+                        </div>
+                    </div>
+                    <div class="d-flex" >
+                        <img class="img-pplRecommend" src="./images/people/4.jpg" alt="">
+                        <div>
+                            <h6 class="m-0 ms-3">Name of someone</h6>
+                            <p class="m-0 ms-3">Developer</p>
+                            <a class="m-0 ms-3" href="#">Location</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5 mb-5">
+        <div class="row">
+            <div class="cardlist mt-5 col-lg-3 col-md-6">
+                <div class="card shadow">
+                    <img src="./images/kelly-sikkema-bj3l739cwc8-unsplash.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h4>Post title</h4>
+                        <span class="badge rounded-pill text-bg-primary mb-2">Primary</span>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
+                            card's content.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cardlist mt-5 col-lg-3 col-md-6">
+                <div class="card shadow">
+                    <img src="./images/kelly-sikkema-bj3l739cwc8-unsplash.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h4>Post title</h4>
+                        <span class="badge rounded-pill text-bg-primary mb-2">Primary</span>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
+                            card's content.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cardlist mt-5 col-lg-3 col-md-6">
+                <div class="card shadow">
+                    <img src="./images/kelly-sikkema-bj3l739cwc8-unsplash.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h4>Post title</h4>
+                        <span class="badge rounded-pill text-bg-primary mb-2">Primary</span>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
+                            card's content.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cardlist mt-5 col-lg-3 col-md-6">
+                <div class="card shadow">
+                    <img src="./images/kelly-sikkema-bj3l739cwc8-unsplash.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h4>Post title</h4>
+                        <span class="badge rounded-pill text-bg-primary mb-2">Primary</span>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                            card's content.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container w-75 mt-5">
+        <div class="row align-items-center">
+            <div class="col-2 mb-5 order-md-1 order-lg-2 text">
+                <img src="./images/people/1.jpg" class="rounded-circle me-5" alt="..." width="100%">
+            </div>
+            <div class="col-10 col-lg-5 order-md-1 order-lg-1 text-lg-end">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam, ratione illum minima aspernatur ad
+                    adipisci earum deleniti temporibus veniam excepturi, est quibusdam quam sit possimus! Eveniet quia
+                    earum
+                    laudantium itaque.</p>
+            </div>
+            <div class="col-lg-5 order-lg-3"></div>
+        </div>
+
+        <div class="row align-items-center">
+            <div class="col-2 mb-5 order-md-1 order-lg-2">
+                <img src="./images/people/2.jpg" class="rounded-circle me-5" alt="..." width="100%">
+            </div>
+            <div class="col-10 col-lg-5 order-md-2 order-lg-3">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam, ratione illum minima aspernatur ad
+                    adipisci earum deleniti temporibus veniam excepturi, est quibusdam quam sit possimus! Eveniet quia
+                    earum
+                    laudantium itaque.</p>
+            </div>
+            <div class="col-lg-5 order-lg-1"></div>
+        </div>
+
+        <div class="row align-items-center">
+            <div class="col-2 mb-5 order-md-1 order-lg-2">
+                <img src="./images/people/3.jpg" class="rounded-circle me-5" alt="..." width="100%">
+            </div>
+            <div class="col-10 col-lg-5 order-md-1 order-lg-1 text-lg-end">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam, ratione illum minima aspernatur ad
+                    adipisci earum deleniti temporibus veniam excepturi, est quibusdam quam sit possimus! Eveniet quia
+                    earum
+                    laudantium itaque.</p>
+            </div>
+            <div class="col-lg-5 order-lg-3"></div>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>

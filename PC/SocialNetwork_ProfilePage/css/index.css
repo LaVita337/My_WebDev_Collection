@@ -1,0 +1,25 @@
+div, img {
+    box-sizing: border-box;
+}
+p {
+    margin-bottom: 6px;
+}
+a { 
+    text-decoration: none;
+}
+
+.bg-whitesmoke {
+    background-color: whitesmoke;
+}
+
+.img-profile {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.img-pplRecommend {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
